@@ -2,28 +2,19 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 )
 
 /* This is the main function,
 where the program start. */
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Hello World!")
-		d, err := ioutil.ReadAll(r.Body)
-		if err != nil {
-			http.Error(w, "Ooops", http.StatusBadRequest)
-			return
-		}
-		fmt.Fprintf(w, "Hello %s\n", d)
-	})
+	l := log.New(os.Stdout, "Product-api", log.LstdFlags)
+	hh := handlers.NewHello(l)
 
-	http.HandleFunc("/novisad", func(http.ResponseWriter, *http.Request) {
-		log.Println("Goodbye World!")
-	})
+	sm := http.NewServeMux()
+	sm.Handle("/", hh)
 
-	http.ListenAndServe(":9090", nil)
+	http.ListenAndServe(":9090", sm)
 }
