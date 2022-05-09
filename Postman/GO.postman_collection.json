@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "a9425c6e-b73d-4b74-ae21-8b380ef17aa2",
+		"name": "GO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"dare55\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NjY3MDAsInVzZXJuYW1lIjoia29tc2EifQ.qzO__BLUW-kQC8rmfmCfbMsU3YTKOHuGO6CbzX2p0EE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"komsa2\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"id\": \"623b0cc3a34d25d8567f9f245\",\r\n            \"text\": \"dare\",\r\n            \"link\": \"dobar\",\r\n            \"image\": \"image\",\r\n            \"ownerId\": \"111000000000000000000000\",\r\n            \"likes\": \"0\",\r\n            \"dislikes\": \"0\",\r\n            \"comments\": []\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/000000000000000000000000/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"000000000000000000000000",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/post/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/6271bb6d827b3dbe206d0a3a/public",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"6271bb6d827b3dbe206d0a3a",
+						"public"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Post By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/000000000000000000000000/post/627128fd4ca32292e74f04aa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"000000000000000000000000",
+						"post",
+						"627128fd4ca32292e74f04aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reaction (Like/Dislike)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reactionBy\": \"00000000000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/000000000000000000000000/post/6271b1c6a54a9c25a33f88f5/reaction/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"000000000000000000000000",
+						"post",
+						"6271b1c6a54a9c25a33f88f5",
+						"reaction",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPublicPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Posts From Connections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Public User Search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"leka\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Personal User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Fakultet\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/personal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Career Info",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Master\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/career",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"career"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Interests",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Master\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/career",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"career"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Connect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62702f5025e3e986c1325b44\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/62702f4385961eb5c61a4ba5/connect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62702f4385961eb5c61a4ba5",
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User Connections",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzA1NzQsInVzZXJuYW1lIjoia29tc2EifQ.AfLwjvClExsKda6i-82iXRc6zH_gsffqwPO1iNtRJXA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/user/627705c9ebd7a2dc231df3db/connect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"627705c9ebd7a2dc231df3db",
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unconnect",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62702f4385961eb5c61a4ba5/connect/62702f5025e3e986c1325b44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62702f4385961eb5c61a4ba5",
+						"connect",
+						"62702f5025e3e986c1325b44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Invitation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62707092eb1f9d7ff5e890da/connect/invitation/62702f4385961eb5c61a4ba5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62707092eb1f9d7ff5e890da",
+						"connect",
+						"invitation",
+						"62702f4385961eb5c61a4ba5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline Invitation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62707092eb1f9d7ff5e890da/connect/invitation/62702f4385961eb5c61a4ba5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62707092eb1f9d7ff5e890da",
+						"connect",
+						"invitation",
+						"62702f4385961eb5c61a4ba5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Invitation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62707092eb1f9d7ff5e890da/connect/invitation/62702f4385961eb5c61a4ba5/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62707092eb1f9d7ff5e890da",
+						"connect",
+						"invitation",
+						"62702f4385961eb5c61a4ba5",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Invitations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62702f4385961eb5c61a4ba5/connect/invitation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62702f4385961eb5c61a4ba5",
+						"connect",
+						"invitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Sent Invitations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/62702f4385961eb5c61a4ba5/connect/invitation/sent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"62702f4385961eb5c61a4ba5",
+						"connect",
+						"invitation",
+						"sent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Connected Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

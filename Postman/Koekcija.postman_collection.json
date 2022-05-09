@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "ce9cb84f-9ecc-4d8a-a700-d7f0225aec0e",
+		"name": "Koekcija",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/userPublicId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/userPublicId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"userPublicId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/isUserPrivate/62771119a0e3b805af9094ab",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/isUserPrivate/62771119a0e3b805af9094ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"isUserPrivate",
+						"62771119a0e3b805af9094ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"leka\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/personal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Fakultet\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/personal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/personal Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Master\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/career",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"career"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/personal Copy 2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE2NTE5NzI0NjQsInVzZXJuYW1lIjoienoifQ.hwatA4Md8m9v_U6zI-HsXz4KfZ-KFIb__ZsdoBxupSo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"62771119a0e3b805af9094ab\",\r\n            \"firstname\": \"Darko\",\r\n            \"lastname\": \"Vrbaski\",\r\n            \"email\": \"dare@gmail.com\",\r\n            \"mobileNumber\": \"0658333384\",\r\n            \"gender\": \"Male\",\r\n            \"birthDay\": \"2022-05-08T00:38:46.799Z\",\r\n            \"username\": \"dare\",\r\n            \"biography\": \"Bioz\",\r\n            \"experience\": \"Zivi u Zr\",\r\n            \"education\": \"Master\",\r\n            \"skills\": \"Programiranje\",\r\n            \"interests\": \"Rukomet\",\r\n            \"password\": \"123\",\r\n            \"isPrivate\": true\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/career",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"career"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
