@@ -13,7 +13,8 @@
     justify-content: space-between;
 }
 .logo{
-    height: 4rem;
+    width: 10rem;
+    height: 6rem;
 }
 .menu li{
     font-weight: 600;

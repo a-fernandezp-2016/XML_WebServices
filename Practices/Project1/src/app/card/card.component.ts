@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
 
   public image:string="https://photoshop-kopona.com/uploads/posts/2019-05/1559108923_0-2.jpg";
-  public title:string = "Curso de Angular con Interpolación";
+  public title:string = "Angular Course with Interpolation";
   constructor() { }
 
   ngOnInit(): void {
