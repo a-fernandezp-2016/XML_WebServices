@@ -4,7 +4,6 @@ interface Card{
   title:string;
   subtitle:string;
   image:string;
-  num?:number;
 }
 
 @Component({
